@@ -16,7 +16,7 @@ get_data <- function() {
         datafile <- unz(temp, "household_power_consumption.txt")
         
         ## Read lines only and get start and linecount
-        lines <- readLines("data/household_power_consumption.txt")
+        lines <- readLines(datafile)
         start <- grep("^1/2/2007", lines) ## Adding '^' is important, otherwise also dates with eg. 11 will be collected, '01' will not work
         end <- grep("^2/2/2007", lines)
         linecount <- length(start) + length(end) - 1
