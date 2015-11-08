@@ -20,7 +20,6 @@ plot4 <- function() {
         ## Plot charts directly to png file
         png(file="plot4.png", width=480, height=480)
         par(mfrow = c(2, 2), mar = c(5, 4, 3.3, 2), oma = c(0, 0, 0, 0), cex.lab= 1, cex.axis = 1)
-        browser()
         with(x, {
                 plot(x$Time, gap, type = "l", xlab = "", ylab = "Global Active Power")
                 plot(x$Time, voltage, type = "l", xlab = "datetime", ylab = "Voltage")
